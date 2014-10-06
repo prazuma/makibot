@@ -7,6 +7,11 @@
 #   hubot time - Reply with current time
 #   hubot die - End hubot process
 
+cure_nishikino = [
+  "それろ〜〜〜それろ〜〜〜",
+  "ワイワイ"
+]
+
 module.exports = (robot) ->
   robot.respond /PING$/i, (msg) ->
     msg.send "PONG"
@@ -28,4 +33,4 @@ module.exports = (robot) ->
     msg.send "何の用ですか"
 
   robot.hear /@maki/, (msg) ->
-    msg.send "それろ〜〜〜それろ〜〜〜"
+    msg.send msg.random cure_nishikino
