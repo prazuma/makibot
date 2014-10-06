@@ -26,3 +26,6 @@ module.exports = (robot) ->
   
   robot.hear /まき/, (msg) ->
     msg.send "何の用ですか"
+
+  robot.hear /@maki/, (msg) ->
+    msg.send "それろ〜〜〜それろ〜〜〜"
