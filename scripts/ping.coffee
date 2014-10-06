@@ -7,6 +7,15 @@
 #   hubot time - Reply with current time
 #   hubot die - End hubot process
 
+tumblr = require "tumblrbot"
+SOURCES = {
+  "lovelivegif.tumblr.com"
+}
+
+getGif = (blog, msg) ->
+  tumblr.photos(blog).random (post) -> 
+    msg.send post.photos[0].original_size.url
+
 cure_nishikino = [
   "それろ〜〜〜それろ〜〜〜",
   "ワイワイ",
@@ -239,3 +248,7 @@ module.exports = (robot) ->
 
   robot.hear /@maki/, (msg) ->
     msg.send msg.random cure_nishikino
+
+  robot.respond /lovelive/i, (msg) -> 
+    blog = msg.random Object.keys(SOURCES)
+    getGif blog, msg
