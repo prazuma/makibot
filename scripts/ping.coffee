@@ -243,7 +243,7 @@ module.exports = (robot) ->
     msg.send "Goodbye, cruel world."
     process.exit 0
   
-  robot.hear /まき/, (msg) ->
+  robot.hear /まきちゃん/, (msg) ->
     msg.send "何の用ですか"
 
   robot.hear /@maki/, (msg) ->
@@ -252,3 +252,9 @@ module.exports = (robot) ->
   robot.respond /lovelive/i, (msg) -> 
     blog = msg.random Object.keys(SOURCES)
     getGif blog, msg
+
+  robot.hear /にこまき/, (msg) ->
+    msg.send "ナニソレイミワカンナイ"
+
+  robot.hear /終わらないパーティ/, (msg) ->
+    msg.send "始めよ！" 
