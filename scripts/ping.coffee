@@ -239,6 +239,13 @@ module.exports = (robot) ->
   robot.respond /TIME$/i, (msg) ->
     msg.send "Server time is: #{new Date()}"
 
+  robot.hear /^まきちゃん今何時？?/, (msg) ->
+    date = new Date()
+    hour = date.getHours()
+    minute = date.getMinutes()
+    result = "今は" + hour + "時" + minute + "分よ"
+    msg.send result
+
   robot.respond /DIE$/i, (msg) ->
     msg.send "Goodbye, cruel world."
     process.exit 0
