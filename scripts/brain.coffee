@@ -18,3 +18,12 @@ module.exports = (robot) ->
     else
       msg.send "何よ"
     robot.brain.save
+
+  robot.hear /まきちゃんマジ天使/, (msg) ->
+    robot.brain.data.engel = {id: 'engel', value: 0} unless robot.brain.data.engel
+    robot.brain.data.engel.value++
+    if( robot.brain.data.engel.value % 10 != 0)
+      msg.send "な、何言ってるのよ！バカ//"
+    else
+      msg.send "あ、ありがと//"
+    robot.brain.save
