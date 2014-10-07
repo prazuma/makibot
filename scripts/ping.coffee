@@ -259,5 +259,5 @@ module.exports = (robot) ->
   robot.hear /終わらないパーティ/, (msg) ->
     msg.send "始めよ！" 
 
-  robot.hear /about/i, (msg) ->
+  robot.respond /ABOUT$/i, (msg) ->
     msg.send "http://dic.nicovideo.jp/a/%E8%A5%BF%E6%9C%A8%E9%87%8E%E7%9C%9F%E5%A7%AB"
