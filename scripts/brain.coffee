@@ -16,8 +16,10 @@ module.exports = (robot) ->
       robot.brain.data.cute.value = 0
       if( robot.brain.data.cute.shy == 3)
         msg.send "もう//意味わかんない//"
+        robot.brain.data.cute.shy = 0
       else
         msg.send "ｳﾞｪｴ"
+        console.log robot.brain.data.cute.shy
     else
       msg.send "何よ"
     robot.brain.save
