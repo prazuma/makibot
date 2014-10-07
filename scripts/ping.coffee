@@ -226,6 +226,11 @@ cure_nishikino = [
   "がんばっているかね？？？？？"
 ]
 
+responses = [
+  "何よ",
+  "何の用？"
+]
+
 module.exports = (robot) ->
   robot.respond /PING$/i, (msg) ->
     msg.send "PONG"
@@ -251,7 +256,7 @@ module.exports = (robot) ->
     process.exit 0
   
   robot.hear /まきちゃん$/, (msg) ->
-    msg.send "何よ"
+    msg.send msg.random responses
 
   robot.hear /@maki/, (msg) ->
     msg.send msg.random cure_nishikino
