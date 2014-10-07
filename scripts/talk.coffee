@@ -5,7 +5,6 @@ module.exports = (robot) ->
     else
       msg.send "エリーチカ！"
 
-module.exports = (robot) ->
   robot.hear /にっこにっこにー/, (msg) ->
     if( Math.floor( Math.random() * 5) == 0)
       msg.send "にっこにっこにー♪"
