@@ -243,7 +243,7 @@ module.exports = (robot) ->
     msg.send "Goodbye, cruel world."
     process.exit 0
   
-  robot.hear /^まきちゃん$/, (msg) ->
+  robot.hear /^まきちゃん/, (msg) ->
     msg.send "何の用ですか"
 
   robot.hear /@maki/, (msg) ->

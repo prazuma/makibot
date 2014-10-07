@@ -15,6 +15,4 @@ module.exports = (robot) ->
       msg.send "もう//意味わかんない//"
     else if( robot.brain.data.cute.value % 2 == 0)
       msg.send "ｳﾞｪｴ"
-    else
-      msg.send "何よ"
     robot.brain.save
