@@ -8,7 +8,7 @@ module.exports = (robot) ->
     robot.brain.save
     console.log robot.brain.data.test
 
-  robot.hear /^まきちゃん可愛い$/i, (msg) ->
+  robot.hear /まきちゃん可愛い/i, (msg) ->
     robot.brain.data.cute = {id: 'cute', value: 0, shy: 0} unless robot.brain.data.cute
     robot.brain.data.cute.value++
     if( robot.brain.data.cute.value % 6 == 0)
