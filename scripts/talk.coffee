@@ -4,3 +4,10 @@ module.exports = (robot) ->
       msg.send "真姫様！"
     else
       msg.send "エリーチカ！"
+
+module.exports = (robot) ->
+  robot.hear /にっこにっこにー/, (msg) ->
+    if( Math.floor( Math.random() * 5) == 0)
+      msg.send "にっこにっこにー♪"
+    else
+      msg.send "気持ち悪い"
