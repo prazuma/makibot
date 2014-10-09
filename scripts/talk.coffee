@@ -23,3 +23,15 @@ module.exports = (robot) ->
 
   robot.hear /おやすみ/, (msg) ->
     msg.send "おやすみなさい"
+
+  robot.hear /疲れた/, (msg) ->
+    msg.send "おつかれさま"
+
+  robot.hear /スピリチュアル/, (msg) ->
+    msg.send "イミワカンナイ！"
+
+  robot.hear /ハラショー/, (msg) ->
+    msg.send "ハラショー"
+
+  robot.hear /ことり/, (msg) ->
+    msg.send "(・8・)"
