@@ -27,5 +27,8 @@ module.exports = (robot) ->
   robot.hear /疲れた/, (msg) ->
     msg.send "おつかれさま"
 
-  robot.hear //, (msg) ->
-    msg.send ""
+  robot.hear /スピリチュアル/, (msg) ->
+    msg.send "イミワカンナイ！"
+
+  robot.hear /ハラショー/, (msg) ->
+    msg.send "ハラショー"
