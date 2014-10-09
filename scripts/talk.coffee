@@ -32,3 +32,6 @@ module.exports = (robot) ->
 
   robot.hear /ハラショー/, (msg) ->
     msg.send "ハラショー"
+
+  robot.hear /ことり/, (msg) ->
+    msg.send "(・8・)"
